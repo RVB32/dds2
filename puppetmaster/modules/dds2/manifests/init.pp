@@ -15,7 +15,7 @@ class dds2-client (
     'libapache2-mod-php5',
     'libyaml-dev',
     'php-pear',
-    'php5-dev',
+    'php5-dev'
    ]
 
   package { $packages: ensure => installed }
@@ -54,11 +54,8 @@ class dds2-client (
     }
   }
 
-
   File['/var/www/'] -> File['/var/www/slides/']
   Package['apache2'] -> Service['apache2']
   Package['mysql-server'] -> Service['mysql']
-
-
 
 }
